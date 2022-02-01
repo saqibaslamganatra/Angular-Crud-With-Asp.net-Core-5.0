@@ -1,0 +1,37 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="bookId" [value]="service.formData.bookId" />
+    <div class="form-group">
+        <label>Book NAME</label>
+        <input class="form-control form-control-lg" placeholder="Book Name" name="bookName"
+            #bookName="ngModel" [(ngModel)]="service.formData.bookName"
+            required [class.invalid]="bookName.invalid && bookName.touched">
+    </div>
+    <div class="form-group">
+        <label>Book Description</label>
+        <input class="form-control form-control-lg" placeholder="Book Description" name="bookDescription"
+            #bookDescription="ngModel" [(ngModel)]="service.formData.bookDescription"
+            required [class.invalid]="bookDescription.invalid && bookDescription.touched">
+    </div>
+    <div class="form-group">
+        <label>Book Author</label>
+        <input class="form-control form-control-lg" placeholder="Book Author" name="bookAuthor"
+            #bookAuthor="ngModel" [(ngModel)]="service.formData.bookAuthor"
+            required [class.invalid]="bookAuthor.invalid && bookAuthor.touched">
+    </div>
+    
+    <div class="form-group">
+        <label>Book Publisher</label>
+        <input class="form-control form-control-lg" placeholder="Book Publisher" name="bookPublisher"
+            #bookPublisher="ngModel" [(ngModel)]="service.formData.bookPublisher"
+            required [class.invalid]="bookPublisher.invalid && bookPublisher.touched">
+    </div>
+    <div class="form-group">
+        <label>ISBN</label>
+        <input class="form-control form-control-lg" placeholder="ISBN" name="isbn"
+            #isbn="ngModel" [(ngModel)]="service.formData.isbn"
+            required [class.invalid]="isbn.invalid && isbn.touched">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+    </div>
+</form>

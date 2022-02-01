@@ -1,0 +1,14 @@
+● src
++---● app
+|   +--● book-details
+|   |  |--book-details.component.ts|.html
+|   |  +--● book-detail-form
+|   |  |  |--book-detail-form.component.ts|.html
+|   |  
+|   +--● shared
+|   |  |--book-detail.service.ts
+|   |  |--book-detail.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap & fa icons)
